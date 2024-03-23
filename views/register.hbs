@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <style>
+        html{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+            height:100%;
+            width: 100%;
+            background-color:crimson;
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            margin-top: 15%;
+            height: 400px;
+            width: 500px;
+            background-color: whitesmoke;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding:40px ;
+            box-shadow: 0px 0px 2px whitesmoke;
+            gap: 10px;
+        }
+        .header h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0px;
+            margin-bottom: 25px;
+            font-size: 50px;
+        }
+
+        input{
+            box-sizing: border-box;
+            height: 45px;
+            width: 100%;
+            padding: 10px;
+            font-size: medium;
+            margin:5px 0px;
+            border: 1px solid lightgrey;
+        }
+
+        button{
+            height: 45px;
+            width: 100%;
+            background-color: crimson;
+            color: white;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: large;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/register" method="post">
+
+        <div class="container">
+
+            <div class="header">
+                <h1> Register Account </h1>
+            </div>
+
+            <input type="text" name="email" id="email" placeholder="Enter your email">
+
+            <input type="text" id="pass" name="password" placeholder="Enter your password">
+
+    
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+
+
+</body>
+</html>

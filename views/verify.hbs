@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verify</title>
+
+    <style>
+        html{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+            height:100%;
+            width: 100%;
+            background-color:lightseagreen;
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            margin-top: 15%;
+            height: 370px;
+            width: 550px;
+            background-color: whitesmoke;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding:40px ;
+            box-shadow: 0px 0px 2px whitesmoke;
+            gap: 10px;
+        }
+        .header h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0px;
+        }
+
+        .msgBox{
+            background-color: rgb(116, 244, 201);
+            width: 100%;
+            height: 70px;
+            box-sizing: border-box;
+            padding: 2px 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .msgBox p{
+            color: rgb(8, 83, 58);
+        }
+
+        input{
+            box-sizing: border-box;
+            height: 45px;
+            width: 100%;
+            padding: 10px;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        button{
+            height: 45px;
+            width: 100%;
+            background-color: crimson;
+            color: white;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: large;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+    <form action="/verify/{{email}}" method="post">
+
+        <div class="container">
+
+            <div class="header">
+                <h1>OTP Verification</h1>
+            </div>
+
+            <div class="msgBox">
+                <p>Dear user, we have successfully sent a verification code to your email - {{email}} </p>
+            </div>
+
+            
+                <input type="text" name="otp" placeholder="Enter verification code">
+        
+
+        
+                <button type="submit">Submit</button>
+                <a href="/">Go back</a>
+        
+
+        </div>
+
+    </form>
+
+
+</body>
+</html>
